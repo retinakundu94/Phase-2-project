@@ -1,35 +1,50 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import  { Switch, Outlet } from 'react-router-dom'
+import Navbar from './Navbar'
+import Home from './Home';
+import CafeList from './CafeList';
+import CafeForm from './CafeForm';
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+    <Router>
+    <div className="App">
+
+      <Navbar />
+
+      <h1>Aesthetic Cafes in NYC</h1>
+      <Switch>
+          <Route path="/" exact component={Home} />
+          <Route path="/cafes" component={CafeList} />
+          <Route path="/add-cafe" component={CafeForm} />
+        </Switch>
+
+      <Outlet />
+
+    </div>
+    </Router>
   )
 }
 
 export default App
+
+// routing --> multiple pages
+
+// server --> json-server
+
+// RESTUL ROUTES
+
+// GET /movies --> data for ALL movies
+
+// GET /movies/1 --> data for the first movie (a.k.a. movie with id of 1)
+
+// POST /movies --> create data for a movie
+
+// PATCH /movies/1 --> update data for movie with id 1
+
+// DELETE /movies/1 --> delete data for movie with id 1
+
+
+// FRONTEND
+
+// GET /home --> everything

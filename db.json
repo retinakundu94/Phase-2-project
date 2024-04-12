@@ -1,0 +1,36 @@
+{
+    "portfolios": [
+        {
+            "id": 1,
+            "name": "Cafe 1"
+        },
+        {
+            "id": 2,
+            "name": "Cafe 2"
+        },
+        {
+            "id": 3,
+            "name": "Cafe 3"
+        },
+        {
+            "id": 4,
+            "name": "Cafe 4"
+        },
+        {
+            "id": 5,
+            "name": "Cafe 5"
+        },
+        {
+            "id": 6,
+            "name": "Cafe 6"
+        },
+        {
+            "id": 7,
+            "name": "Cafe 8"
+        },
+        {
+            "id": 8,
+            "name": "Cafe 8"
+        },
+    ]
+}
