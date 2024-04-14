@@ -1,11 +1,13 @@
 import React, { useState, useEffect } from 'react';
-import TodoItem from './TodoItem';
+import React from 'react';
+import { Link } from 'react-router-dom'
+import ToDoItem from './components/ToDoItem';
 
-function TodoList() {
+function ToDoList() {
   const [todos, setTodos] = useState([]);
 
   useEffect(() => {
-    fetch('http://localhost:3001/tasks')
+    fetch('http://localhost:3000/todos')
       .then(response => response.json())
       .then(data => setTodos(data));
   }, []);
@@ -13,11 +15,11 @@ function TodoList() {
   return (
     <div>
       {todos.map(todo => (
-        <TodoItem key={todo.id} todo={todo} />
+        <ToDoItem key={todo.id} todo={todo} />
       ))}
     </div>
   );
 }
 
-export default TodoList;
+export default ToDoList;
 

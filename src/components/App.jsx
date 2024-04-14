@@ -1,9 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom'
-import TodoList from './components/TodoList';
-import ToDoForm from './components/ToDoForm';
-import TodoItem from './components/TodoItem';
 import NavBar from './components/NavBar';
+import ToDoForm from './components/ToDoForm';
+import ToDoItem from './components/ToDoItem';
+import ToDoList from './components/ToDoList';
+
 
 function App() {
   return (
@@ -11,8 +12,8 @@ function App() {
       <NavBar />
       <h1>Todo List</h1>
       <ToDoForm />
-      <TodoList />
-      <TodoItem />
+      <ToDoList />
+      <ToDoItem />
     </div>
   );
 }

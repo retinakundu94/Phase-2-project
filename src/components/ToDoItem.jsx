@@ -1,4 +1,7 @@
-function TodoItem({ todo }) {
+import React from 'react';
+import { Link } from 'react-router-dom';
+
+function ToDoItem({ todo }) {
     return (
       <div>
         <h3>{todo.title}</h3>
@@ -7,5 +10,5 @@ function TodoItem({ todo }) {
     );
   }
   
-  export default TodoItem;
+  export default ToDoItem;
   

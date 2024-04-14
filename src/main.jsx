@@ -4,10 +4,10 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 
 // COMPONENTS
 import App from './components/App';
-import TodoList from './components/TodoList';
-import TodoForm from './components/TodoForm'; // Corrected component name
-import TodoItem from './components/TodoItem';
-import NavBar from './components/NavBar';
+import ToDoList from './components/ToDoList';
+import ToDoForm from './components/ToDoForm'; // Corrected component name
+import ToDoItem from './components/ToDoItem';
+
 
 // CSS
 import './index.css';
@@ -20,15 +20,15 @@ const routes = [
     children: [
       {
         index: true,
-        element: <TodoList />
+        element: <ToDoList />
       },
       {
         path: "add-todo",
-        element: <TodoForm />  // Corrected component name used here
+        element: <ToDoForm />  // Corrected component name used here
       },
       {
         path: "todo/:id",
-        element: <TodoItem />
+        element: <ToDoItem />
       }
     ]
   }

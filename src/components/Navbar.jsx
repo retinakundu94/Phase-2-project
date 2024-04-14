@@ -1,3 +1,4 @@
+import React from 'react';
 import { Link } from 'react-router-dom';
 
 function NavBar() {
@@ -5,7 +6,7 @@ function NavBar() {
     <nav>
       <ul>
         <li><Link to="/">Home</Link></li>
-        <li><Link to="/add-todo">Add Todo</Link></li>
+        <li><Link to="/add-todo">Add ToDo</Link></li>
       </ul>
     </nav>
   );
