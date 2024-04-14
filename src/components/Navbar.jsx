@@ -1,23 +1,16 @@
-import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom';
 
-function Navbar() {
-
-    return (
-        <div>
-
-            <Link to="/">Home</Link>
-
-            <Link to="/about">About</Link>
-
-            <Link to="/about/portfolio">About: Portfolio</Link>
-
-            <Link to="/about/bio">About: Bio</Link>
-
-            <Link to="/contact">Contact</Link>
-
-        </div>
-    )
-
+function NavBar() {
+  return (
+    <nav>
+      <ul>
+        <li><Link to="/">Home</Link></li>
+        <li><Link to="/add-todo">Add Todo</Link></li>
+      </ul>
+    </nav>
+  );
 }
 
-export default Navbars
+export default NavBar;
+
+

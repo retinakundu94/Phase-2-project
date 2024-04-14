@@ -1,32 +1,32 @@
-import  { Switch, Outlet } from 'react-router-dom'
-import Navbar from './Navbar'
-import Home from './Home';
-import CafeList from './CafeList';
-import CafeForm from './CafeForm';
+import React from 'react';
+import { Link } from 'react-router-dom'
+import TodoList from './components/TodoList';
+import ToDoForm from './components/ToDoForm';
+import TodoItem from './components/TodoItem';
+import NavBar from './components/NavBar';
 
 function App() {
-
   return (
-    <Router>
     <div className="App">
-
-      <Navbar />
-
-      <h1>Aesthetic Cafes in NYC</h1>
-      <Switch>
-          <Route path="/" exact component={Home} />
-          <Route path="/cafes" component={CafeList} />
-          <Route path="/add-cafe" component={CafeForm} />
-        </Switch>
-
-      <Outlet />
-
+      <NavBar />
+      <h1>Todo List</h1>
+      <ToDoForm />
+      <TodoList />
+      <TodoItem />
     </div>
-    </Router>
-  )
+  );
 }
 
-export default App
+export default App;
+
+
+
+
+
+
+
+
+
 
 // routing --> multiple pages
 
