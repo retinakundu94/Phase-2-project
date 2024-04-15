@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
+import { useNavigate, useOutletContext } from 'react-router-dom';
 
 function ToDoForm({ onAdd }) {
   const [title, setTitle] = useState('');
-
+  const {setTodos} = useOutletContext()
+  const navigate = useNavigate()
   const handleSubmit = (e) => {
     e.preventDefault();
     if (!title) return;
@@ -16,8 +18,10 @@ function ToDoForm({ onAdd }) {
     })
     .then(res => res.json())
     .then(data => {
+      setTodos(data)
       if (onAdd) onAdd(data);
       setTitle('');
+      navigate('/')
     });
   };
 
