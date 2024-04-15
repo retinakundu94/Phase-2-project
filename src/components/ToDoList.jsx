@@ -3,13 +3,7 @@ import { Link } from 'react-router-dom'
 import ToDoItem from './ToDoItem';
 
 function ToDoList() {
-  const [todos, setTodos] = useState([]);
-
-  useEffect(() => {
-    fetch('http://localhost:3000/todos')
-      .then(response => response.json())
-      .then(data => setTodos(data));
-  }, []);
+  
 
   return (
     <div>
