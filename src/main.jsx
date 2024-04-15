@@ -5,9 +5,8 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 // COMPONENTS
 import App from './components/App';
 import ToDoList from './components/ToDoList';
-import ToDoForm from './components/ToDoForm'; // Corrected component name
+import ToDoForm from './components/ToDoForm'; 
 import ToDoItem from './components/ToDoItem';
-
 
 // CSS
 import './index.css';
@@ -24,7 +23,7 @@ const routes = [
       },
       {
         path: "add-todo",
-        element: <ToDoForm />  // Corrected component name used here
+        element: <ToDoForm />  
       },
       {
         path: "todo/:id",

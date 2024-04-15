@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import React from 'react';
 import { Link } from 'react-router-dom'
-import ToDoItem from './components/ToDoItem';
+import ToDoItem from './ToDoItem';
 
 function ToDoList() {
   const [todos, setTodos] = useState([]);
@@ -22,4 +21,5 @@ function ToDoList() {
 }
 
 export default ToDoList;
+
 

@@ -1,9 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom'
-import NavBar from './components/NavBar';
-import ToDoForm from './components/ToDoForm';
-import ToDoItem from './components/ToDoItem';
-import ToDoList from './components/ToDoList';
+import NavBar from './NavBar';
+import ToDoForm from './ToDoForm';
+import ToDoItem from './ToDoItem';
+import ToDoList from './ToDoList';
 
 
 function App() {
