@@ -12,7 +12,9 @@ function App() {
   useEffect(() => {
     fetch('http://localhost:3000/todos')
       .then(response => response.json())
-      .then(data => setTodos(data));
+      .then(data => {
+        setTodos(data)
+      });
   }, []);
 
   return (
@@ -20,7 +22,7 @@ function App() {
        
       <NavBar />
       <h1>Todo List</h1>
-      <Outlet context={{setTodos}}/>
+      <Outlet context={{todos, setTodos}}/>
  
       {/* <ToDoForm setTodos={}/>
       <ToDoList />

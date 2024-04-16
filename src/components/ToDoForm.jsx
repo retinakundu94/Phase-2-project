@@ -3,7 +3,7 @@ import { useNavigate, useOutletContext } from 'react-router-dom';
 
 function ToDoForm({ onAdd }) {
   const [title, setTitle] = useState('');
-  const {setTodos} = useOutletContext()
+  const {setTodos, todos} = useOutletContext()
   const navigate = useNavigate()
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -18,7 +18,8 @@ function ToDoForm({ onAdd }) {
     })
     .then(res => res.json())
     .then(data => {
-      setTodos(data)
+      console.log(data)
+      setTodos([...todos, data])
       if (onAdd) onAdd(data);
       setTitle('');
       navigate('/')

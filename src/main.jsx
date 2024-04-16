@@ -7,18 +7,20 @@ import App from './components/App';
 import ToDoList from './components/ToDoList';
 import ToDoForm from './components/ToDoForm'; 
 import ToDoItem from './components/ToDoItem';
+import MotivationalMessage from './components/MotivationalMessage'; // Import the new component
+
 
 // CSS
 import './index.css';
 
-// ROUTES
+
 const routes = [
   {
     path: "/",
     element: <App />,
     children: [
       {
-        index: '/', //true,
+        path: "/",
         element: <ToDoList />
       },
       {
@@ -28,15 +30,17 @@ const routes = [
       {
         path: "todo/:id",
         element: <ToDoItem />
+      },
+      {
+        path: "motivation",  // New route for the motivational message
+        element: <MotivationalMessage />
       }
     ]
   }
 ];
 
-// ROUTER
 const router = createBrowserRouter(routes);
 
-// RENDER
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <RouterProvider router={router} />
